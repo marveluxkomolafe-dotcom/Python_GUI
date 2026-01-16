@@ -1,0 +1,19 @@
+import tkinter as tk
+
+def convert():
+    amount = float(box.get())
+    result["text"] = "Dollars: " + str(amount / 1500)
+
+root = tk.Tk()
+root.title("Converter")
+
+tk.Label(root, text="Naira").pack()
+box = tk.Entry(root)
+box.pack()
+
+tk.Button(root, text="Convert to Dollar", command=convert).pack()
+
+result = tk.Label(root, text="")
+result.pack()
+
+root.mainloop()
