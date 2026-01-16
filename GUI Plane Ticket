@@ -1,0 +1,22 @@
+import tkinter as tk
+
+def book():
+    output["text"] = "Ticket booked for " + name_box.get() + "\nDestination: " + dest_box.get()
+
+app = tk.Tk()
+app.title("Flight Booking")
+
+tk.Label(app, text="Name").grid(row=0, column=0)
+name_box = tk.Entry(app)
+name_box.grid(row=0, column=1)
+
+tk.Label(app, text="Destination").grid(row=1, column=0)
+dest_box = tk.Entry(app)
+dest_box.grid(row=1, column=1)
+
+tk.Button(app, text="Book Flight", command=book).grid(row=2, columnspan=2)
+
+output = tk.Label(app, text="")
+output.grid(row=3, columnspan=2)
+
+app.mainloop()
