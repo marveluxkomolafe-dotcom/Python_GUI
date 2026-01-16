@@ -1,0 +1,22 @@
+import tkinter as tk
+
+def multiply():
+    x = int(num1.get())
+    y = int(num2.get())
+    ans["text"] = x * y
+
+win = tk.Tk()
+win.title("Simple Calculator")
+
+num1 = tk.Entry(win)
+num1.pack()
+
+num2 = tk.Entry(win)
+num2.pack()
+
+tk.Button(win, text="Multiply", command=multiply).pack()
+
+ans = tk.Label(win, text="")
+ans.pack()
+
+win.mainloop()
